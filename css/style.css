@@ -32,7 +32,7 @@ body {
 .subject-crime         { --subject-color: #dc3545; }
 .subject-constitution  { --subject-color: #fd7e14; }
 .subject-contract      { --subject-color: #198754; }
-.subject-bns           { --subject-color: #d63384; }
+.subject-bns           { --subject-color: #3362d6; }
 .subject-bnss          { --subject-color: #0aa2c0; }
 .subject-bsa           { --subject-color: #b8860b; }
 
@@ -241,4 +241,17 @@ body {
 .sub-row .index-topic {
   padding-left: 1.5rem;
   color: #495057;
+}
+
+/* Chapter lists (e.g. BNS) */
+.chapters-card {
+  max-width: 520px;
+}
+
+.chapter-no {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
 }
