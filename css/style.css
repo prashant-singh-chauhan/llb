@@ -1,0 +1,138 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6a3093 100%);
+  background-attachment: fixed;
+}
+
+.subject-card {
+  max-width: 380px;
+  border: none;
+  border-radius: 1rem;
+}
+
+.subject-link {
+  --subject-color: #2a5298;
+  color: var(--subject-color);
+  border: 2px solid var(--subject-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.subject-link:hover,
+.subject-link:focus {
+  color: #fff;
+  background-color: var(--subject-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.subject-jurisprudence { --subject-color: #0d6efd; }
+.subject-tort          { --subject-color: #6f42c1; }
+.subject-crime         { --subject-color: #dc3545; }
+.subject-constitution  { --subject-color: #fd7e14; }
+.subject-contract      { --subject-color: #198754; }
+.subject-bns           { --subject-color: #d63384; }
+.subject-bnss          { --subject-color: #0aa2c0; }
+.subject-bsa           { --subject-color: #b8860b; }
+
+/* Small screens: tighter spacing so the card fits comfortably */
+@media (max-width: 575.98px) {
+  .subject-card {
+    max-width: 100%;
+  }
+  .subject-card h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.subject-link .paper-code {
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+  font-family: SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/* Syllabus pages */
+.syllabus-card {
+  max-width: 760px;
+  border: none;
+  border-radius: 1rem;
+}
+
+.module-label {
+  color: var(--subject-color, #2a5298);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.syllabus-accordion .accordion-item {
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.syllabus-accordion .accordion-button {
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.syllabus-accordion .accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: #f8f9fa;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.syllabus-accordion .accordion-button:focus {
+  border-color: var(--subject-color, #2a5298);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.module-number {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: var(--subject-color, #2a5298);
+  font-size: 0.85rem;
+}
+
+.topic {
+  display: flex;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+.topic-no {
+  flex-shrink: 0;
+  min-width: 2rem;
+  color: var(--subject-color, #2a5298);
+  font-family: SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+}
+
+.topic.is-match {
+  border-color: #ffe69c;
+  background-color: #fff3cd;
+  font-weight: 600;
+}
+
+.topic-subitems {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
