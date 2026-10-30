@@ -36,6 +36,7 @@ body {
 .subject-bnss          { --subject-color: #0aa2c0; }
 .subject-bsa           { --subject-color: #b8860b; }
 .text-orange           { color: #fd7e14; }
+.text-purple           { color: #6f42c1;}
 /* Small screens: tighter spacing so the card fits comfortably */
 @media (max-width: 575.98px) {
   .subject-card {
